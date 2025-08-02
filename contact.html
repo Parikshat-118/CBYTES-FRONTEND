@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CBytes Tech Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #7c3aed;
+            --secondary: #10b981;
+            --accent: #3b82f6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #060818;
+            color: var(--light);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(16px) brightness(1.2);
+            -webkit-backdrop-filter: blur(16px) brightness(1.2);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 
+                0 8px 32px 0 rgba(31, 38, 135, 0.2),
+                0 0 20px rgba(124, 58, 237, 0.3);
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+        }
+
+        .neon-btn {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .neon-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.5);
+        }
+
+        .neon-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+            z-index: -1;
+        }
+
+        .neon-btn:hover::before {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <header class="bg-gray-950 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 flex items-center justify-center">
+                    <i class="fas fa-robot text-white"></i>
+                </div>
+                <a href="index.HTML" class="text-xl font-bold gradient-text">CBytes Tech Solutions</a>
+            </div>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="hover:text-purple-400 transition">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+   
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Get in Touch</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-8">
+                    <h3 class="text-2xl font-bold mb-4">Contact Information</h3>
+                    <p class="mb-4"><i class="fas fa-map-marker-alt text-purple-400 mr-2"></i>C-4/99, Near C-4 Bus Stand, opposite GOV Boys School, Keshav Puram, Delhi – 110035</p>
+                    <p class="mb-4"><i class="fas fa-phone text-purple-400 mr-2"></i><a href="tel:+917838880600" class="text-gray-300 hover:text-purple-400">+91 7838880600</a></p>
+                    <p class="mb-4"><i class="fas fa-phone text-purple-400 mr-2"></i><a href="tel:+917838880600" class="text-gray-300 hover:text-purple-400">+91 9015523615</a></p>
+                    <p class="mb-4"><i class="fas fa-envelope text-purple-400 mr-2"></i><a href="mailto:cbytes.info@gmail.com" class="text-gray-300 hover:text-purple-400">cbytes.info@gmail.com</a></p>
+                </div>
+                <div class="glass-card p-8">
+    <h3 class="text-2xl font-bold mb-4">Contact Form</h3>
+    <form id="contactForm">
+        <div class="mb-4">
+            <label class="block text-gray-300 mb-2">Name</label>
+            <input type="text" name="name" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 text-white focus:border-purple-500 focus:outline-none" required>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-300 mb-2">Email</label>
+            <input type="email" name="email" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 text-white focus:border-purple-500 focus:outline-none" required>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-300 mb-2">Message</label>
+            <textarea name="message" class="w-full px-4 py-2 rounded bg-gray-800 border border-gray-700 text-white focus:border-purple-500 focus:outline-none" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="neon-btn w-full py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium">
+            Send Message
+        </button>
+    </form>
+    <div id="successMessage" class="mt-4 text-green-500 hidden">Your message has been sent successfully!</div>
+</div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Find Us Here</h2>
+            <div class="relative w-full h-96">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1663.3926247787795!2d77.15448923328947!3d28.690831998010452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDQxJzI3LjAiTiA3N8KwMDknMTguOCJF!5e1!3m2!1sen!2sin!4v1753723558823!5m2!1sen!2sin" width="100%" height="400" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-gray-950 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">© 2025 CBytes Computer Institute. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); 
+
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData.entries());
+        console.log('Form Data:', data);
+
+       
+        fetch('https://cbytes-backend.onrender.com/api/contact', {   
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => {
+            if (response.ok) {
+                document.getElementById('successMessage').classList.remove('hidden');
+                this.reset();
+            } else {
+                alert('There was an error submitting your form. Please try again.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error submitting your form. Please try again.');
+        });
+    });
+</script>

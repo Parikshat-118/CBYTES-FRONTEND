@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Trial - CBytes Tech Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #7c3aed;
+            --secondary: #10b981;
+            --accent: #3b82f6;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #060818;
+            color: var(--light);
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        .glass-card {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(16px) brightness(1.2);
+            -webkit-backdrop-filter: blur(16px) brightness(1.2);
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 
+                0 8px 32px 0 rgba(31, 38, 135, 0.2),
+                0 0 20px rgba(124, 58, 237, 0.3);
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+        }
+
+        .neon-btn {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .neon-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.5);
+        }
+
+        .neon-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+            z-index: -1;
+        }
+
+        .neon-btn:hover::before {
+            transform: translateX(100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    
+    <header class="bg-gray-950 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 flex items-center justify-center">
+                    <i class="fas fa-robot text-white"></i>
+                </div>
+                    <a href="index.HTML" class="text-xl font-bold gradient-text">CBytes Tech Solutions</a>
+            </div>
+            <nav>
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="hover:text-purple-400 transition">Home</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Start Your Free Trial</h2>
+            <div class="glass-card p-8">
+                <h3 class="text-2xl font-bold mb-4">Experience Our Courses</h3>
+                <p class="mb-4">Join our free trial to explore our immersive AI and coding programs. Watch the video below to see what you can expect!</p>
+                <div class="relative w-full h-64 mb-6">
+                    <iframe class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/EE0PNPRoTWc" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p class="text-gray-300">Ready to dive in? Click the button below to start your free trial!</p>
+                <div class="text-center mt-6">
+                    <a href="contact.html" class="neon-btn px-8 py-3 rounded-full bg-gradient-to-r from-purple-600 to-blue-500 text-white font-medium">
+                        Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer class="bg-gray-950 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-gray-400">© 2025 CBytes Computer Institute. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
